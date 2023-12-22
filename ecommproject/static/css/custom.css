@@ -1,0 +1,72 @@
+body {
+     font-family: 'Caveat', cursive;
+     }
+
+ .nav-item {
+      letter-spacing:.2em;
+      font-size:14px;
+      text-transform:uppercase;
+      }
+
+ .dropdown-item {
+      letter-spacing:.2em;
+      font-size:14px;
+      text-transform:lowercase;
+      }
+ .my_footer{
+      padding-top:20px;
+      font-size:14px;
+letter-spacing:.2em;
+      }
+ .my_footer p
+ {
+      background-color:#DC143C;
+      height:60px;
+      text-transform:uppercase;
+      padding-top:20px;
+      }
+ .card-body h5{
+      text-align:center;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      }
+.my_bottom_margin{
+       margin-bottom:20px;
+       }
+ .bg-body-tertiary .container-fluid .navbar-brand{
+       letter-spacing:.2em;
+       text-transform:uppercase;
+       }
+ .my_search_text{
+       padding-top:20px;
+       }
+  .my-custom-table{
+      min-width:400px;
+      font-size:14px;
+      }
+  .my-custom-thread{
+      font-weight:normal;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      background-color:#39A275!important;
+  }
+  .custom-a{
+      text-decoration:none;
+      }
+  .custom-icon{
+      text-decoration:none;
+      color:blue;
+      }
+  .my-custom-button{
+      margin-top:5px;
+      }
+  .custom-a{
+      text-decoration:none;
+      }
+  .custom-icon{
+      text-decoration:none;
+      color:red;
+      }
+  .my-custom-button{
+      margin-top:5px;
+      }

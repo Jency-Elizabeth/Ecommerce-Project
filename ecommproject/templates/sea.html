@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+     {% block metadescription %}
+We Have Variety of Products
+{% endblock %}
+     {% block title %}
+Search
+{% endblock %}
+{% block content %}
+<div>
+    <p class="text-center my_search_text">You Have Searched For:<b>"{{query}}"</b></p>
+</div>
+
+<div class="container">
+    <div class="text-center">
+
+    <h1>Search Results</h1>
+    <p>Search query: {{ query }}</p>
+
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <h2>{{ product.name }}</h2>
+                    {% if product.Image %}
+                        <img src="{{ product.Image.url }}" alt="{{ product.name }} Image">
+                    {% endif %}
+                    <p>{{ product.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products found.</p>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

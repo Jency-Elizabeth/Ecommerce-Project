@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+  {{Product.decription | truncatewords:155}}
+{% endblock %}
+{% block title %}
+   {% if category %}
+       {{product.name}}--Online Movie Store
+    {% endif %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <p><a href="{% url 'shopkart_app:AllProdCat' %}">Home</a>
+        <a href="{{product.category.get_url}}">
+            {{product.category}} | {{product.name}}</a></p>
+    </div>
+</div><br>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="col-9 col-md-12 col-sm-12 col-lg-12">
+               <div style="min-width:18rem;">
+            <img src="{{product.Image.url}}" alt="{{product.name}}" width="300" height="300">
+               </div>
+            </div>
+        </div>
+            <div class="col">
+                <div class="col-9 col-sm-8">
+<h3><u>{{product.name}}</u></h3>
+            <h5>Price:${{product.price}}</h5>
+            <h5>Product Description :</h5>
+            <p>{{product.description}}</p>
+            {% if product.stock <= 0 %}
+               <p><b>Out of Stock</b></p>
+            {% else %}
+            <a href="{% url 'cart_app:add_cart' product.id %}" class="btn btn-secondary">Add to Cart</a>
+            {% endif %}
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
